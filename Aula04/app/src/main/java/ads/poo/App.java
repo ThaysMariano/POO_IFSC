@@ -3,41 +3,90 @@
  */
 package ads.poo;
 
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
 
-        //int moeda = -1;
-       // do {
-       //     System.out.println("Digite o valor da sua moeda: " + args[0]);
-       //     int soma = 0;
-      //      moeda = Integer.parseInt(args[0]);
-      // } while (moeda != 0);
+        Scanner leitor = new Scanner(System.in);
 
-        int moeda;
-        int soma=0;
-        int valor;
-
-        System.out.println("Digite o valor da sua moeda: " + args[0]);
-        moeda = Integer.parseInt(args[0]);
-
-        soma += moeda;
+        System.out.println("Digite o numero de moedas: ");
+        int numeroMoedas = leitor.nextInt();
 
 
+        System.out.println("Digite o valor da moeda: ");
+        int moeda = leitor.nextInt();
 
+        // quantidades
+        int moeda1=0;
+        int moeda5=0;
+        int moeda10=0;
+        int moeda25=0;
+        int moeda50=0;
+        int moeda100=0;
 
+        double soma=0;
+        int quantidaeTotalMoedas=0;
 
-
-
-        int[] moedas = new int[6];
+        double [] moedasValoresCentavos = {1, 5, 10, 25, 50, 100};
 
 
 
+           for(int i =0; i < numeroMoedas; i++) {
+               System.out.println("Digite o valor da moeda: ");
+               moeda = leitor.nextInt();
+               switch (moeda) {
+                   case 1:
+                       moeda1++;
+                       quantidaeTotalMoedas++;
+                       break;
+                   case 5:
+                       moeda5++;
+                       quantidaeTotalMoedas++;
+                       break;
+                   case 10:
+                       moeda10++;
+                       quantidaeTotalMoedas++;
+                       break;
+                   case 25:
+                       moeda25++;
+                       quantidaeTotalMoedas++;
+                       break;
+                   case 50:
+                       moeda50++;
+                       quantidaeTotalMoedas++;
+                       break;
+                   case 100:
+                       moeda100++;
+                       quantidaeTotalMoedas++;
+                       break;
+                   case 0:
+                       break;
+                   default:
+                       System.out.println("Número inválido");
+                       break;
+
+               }
 
 
 
+           }
 
 
+        System.out.printf("""
+                Moedas 1 centavo    :   %d
+                Moedas 5 centavos   :   %d
+                Moedas 10 centavos  :   %d
+                Moedas 25 centavos  :   %d
+                Moedas 50 centavos  :   %d
+                Moedas de 1  real   :   %d
+ 
+                Total de Moedas     :   %d
+                Valor total         :   %f
+                
+                """,moeda1, moeda5, moeda10, moeda25, moeda50, moeda100, quantidaeTotalMoedas, soma );
 
 
     }
