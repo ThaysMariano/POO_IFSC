@@ -3,6 +3,8 @@
  */
 package ads.poo;
 
+import org.checkerframework.checker.units.qual.C;
+
 public class App {
 
     public static void main(String[] args) {
@@ -27,12 +29,53 @@ public class App {
         gol.definirCor("verde");
         gol.definirVelocidade(30);
 
+        //Carro e = gol; são apenas 2 objetos no código; os dois apontam para o mesmo local na memória.
+
+        System.out.println("");
         System.out.println(fusca.obterModelo()+ " "+fusca.obterCor()+" está a "+ fusca.obterVelocidade() + "Km/h");
         System.out.println(gol.obterModelo()+ " "+ gol.obterCor()+" está a "+ gol.obterVelocidade() + "Km/h");
+        System.out.println("");
+
+        Caneta a = new Caneta();
+        a.definirCor("Preta");
+        a.definirPorcentagem(100);
+
+        System.out.println(a.desenhar(10));
+
+        Caneta b = new Caneta();
+        b.definirCor("Rosa");
+        b.definirPorcentagem(12);
+
+        System.out.println(b.desenhar(-15));
+        System.out.println("");
+
+        Contador contador = new Contador();
+        contador.atribuirValor(21);
+        contador.incrementarContador();
+        contador.incrementarContador();
+
+        System.out.println(contador.obterValor());
+
+
+
+        Buzz buzz = new Buzz();
+
+
+        System.out.println(buzz.abrirAsas());
 
 
 
 
+
+
+
+
+
+
+
+//        Como não fazer:
+//        System.out.println("desenhando "+ a.obterDistancia()+ " cm"+ " com a cor "+ a.obterCor()+ " restam "+ a.obterPorcentagemAtual()+ "% de tinta");
+//        System.out.println("desenhando "+ b.obterDistancia()+ " cm"+ " com a cor "+ b.obterCor()+ " restam "+ b.obterPorcentagemAtual()+ "% de tinta");
 
     }
 }
