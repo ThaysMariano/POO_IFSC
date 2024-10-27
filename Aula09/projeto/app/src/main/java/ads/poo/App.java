@@ -55,13 +55,19 @@ public class App {
         contador.incrementarContador();
 
         System.out.println(contador.obterValor());
-
+        System.out.println(" ");
 
 
         Buzz buzz = new Buzz();
 
 
-        System.out.println(buzz.abrirAsas());
+
+
+        System.out.println(buzz.abrirFecharAsas() + " " + buzz.abrirFecharAsas() + " " + buzz.abrirFecharAsas());
+        System.out.println(buzz.dispararLaser());
+        System.out.println(buzz.abrirFecharCapacete()+ " " + buzz.abrirFecharCapacete());
+        System.out.println(buzz.golpear());
+        System.out.println(buzz.falar());
 
 
 
