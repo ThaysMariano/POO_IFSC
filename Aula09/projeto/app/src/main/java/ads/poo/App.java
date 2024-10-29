@@ -18,6 +18,7 @@ public class App {
 //        System.out.println("Velocidade Fusca: "+ fusca.obterVelocidade() + " Km/h");
 //        System.out.println("Velocidade Ferrari: "+ ferrari.obterVelocidade() + " Km/h");
 
+// --------------------------------------------------------------------
 
         Carro fusca = new Carro();
         fusca.definirModelo("fusca");
@@ -36,6 +37,8 @@ public class App {
         System.out.println(gol.obterModelo()+ " "+ gol.obterCor()+" está a "+ gol.obterVelocidade() + "Km/h");
         System.out.println("");
 
+// -----------------------------------------------------------------
+
         Caneta a = new Caneta();
         a.definirCor("Preta");
         a.definirPorcentagem(100);
@@ -49,6 +52,8 @@ public class App {
         System.out.println(b.desenhar(-15));
         System.out.println("");
 
+// -----------------------------------------------------------------
+
         Contador contador = new Contador();
         contador.atribuirValor(21);
         contador.incrementarContador();
@@ -58,16 +63,17 @@ public class App {
         System.out.println(" ");
 
 
+// -----------------------------------------------------------------
+
         Buzz buzz = new Buzz();
-
-
-
 
         System.out.println(buzz.abrirFecharAsas() + " " + buzz.abrirFecharAsas() + " " + buzz.abrirFecharAsas());
         System.out.println(buzz.dispararLaser());
         System.out.println(buzz.abrirFecharCapacete()+ " " + buzz.abrirFecharCapacete());
         System.out.println(buzz.golpear());
         System.out.println(buzz.falar());
+
+// -----------------------------------------------------------------
 
 
 

@@ -4,7 +4,6 @@ public class Contador {
 
     private int valorAtual;
 
-
     public void atribuirValor(int i){
        valorAtual=i;
     }
@@ -16,8 +15,6 @@ public class Contador {
     public int obterValor(){
         return valorAtual;
     }
-
-
 
 
 }

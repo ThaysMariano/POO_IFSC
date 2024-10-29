@@ -8,9 +8,6 @@ public class Buzz {
     private int asas;
     private int capacete;
 
-
-
-
     public String abrirFecharAsas() {
         if (asas % 2 ==0){
             asas++;
