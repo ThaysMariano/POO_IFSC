@@ -3,8 +3,8 @@ package ads.poo;
 public class Pessoa {
 
 
-
     private String nome;
+    private String sobrenome;
     private String cpf;
 
     private int dataNasc;
@@ -14,15 +14,21 @@ public class Pessoa {
 
 //----------------------------------------------------------
 
-    //metodo construtor
-    public Pessoa(String n, String c){
-        nome =n;
-        cpf =c;
-    }
-
-    //ainda pode criar sem parametros diretos
     public Pessoa(){
 
+    }
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, String sobrenome) {
+        this(nome);
+        this.sobrenome = sobrenome;
+    }
+
+    public Pessoa(String nome, String sobrenome, String cpf) {
+        this(nome, sobrenome);
+        this.cpf = cpf;
     }
 
     public void definirNome(String n){
@@ -36,6 +42,7 @@ public class Pessoa {
     public String imprimir(){
         return "Nome: "+ nome+ "   CPF: "+ cpf;
     }
+
 
 
 

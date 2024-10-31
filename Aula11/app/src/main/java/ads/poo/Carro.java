@@ -2,7 +2,7 @@ package ads.poo;
 
 public class Carro {
 
-    private final int VELOCIDADE_MAXIMA= 200;
+    private final int VELOCIDADE_MAXIMA;
     private int velocidadeAtual;
 
 
@@ -15,32 +15,33 @@ public class Carro {
 //----------------------------------------------------------------
 
 
-    public void acelerar(int numero){
-        if ( (velocidadeAtual + numero) >VELOCIDADE_MAXIMA) {
-            velocidadeAtual = VELOCIDADE_MAXIMA;
-        }
-        else{
-            velocidadeAtual += numero;
-        }
-    }
-    public void frear(int numero) {
-        if ((velocidadeAtual - numero) < 0) {
-            velocidadeAtual = 0;
-        } else {
-            velocidadeAtual -= numero;
-        }
+    public Carro(int VELOCIDADE_MAXIMA, int velocidadeAtual, int aerodinamica, int preco, int integridade, String modelo){
+        this.VELOCIDADE_MAXIMA = VELOCIDADE_MAXIMA;
+        this.velocidadeAtual = 0;
+        this.aerodinamica = aerodinamica;
+        this.preco = preco;
+        this.integridade = integridade;
+        this.modelo = modelo;
+
+        this.acelerar(velocidadeAtual);
+
     }
 
-    public int obterVelocidade(){
+    public void acelerar(int numero){
+        int numAbs = Math.abs(numero);
+        this.velocidadeAtual = Math.min(velocidadeAtual+numAbs, VELOCIDADE_MAXIMA);
+
+        //Professror: this.velocidadeAtual = Math.max(Math.min(VELMAX, velAtual+v), 0); <-- Apenas uma linha
+    }
+
+    public void frear(int numero) {
+        int numAbs = Math.abs(numero);
+        this.velocidadeAtual = Math.max(velocidadeAtual-numAbs, 0);
+    }
+
+    public int obterVelocidadeAtual(){
         return velocidadeAtual;
     }
-
-
-
-
-
-
-
 
 
 
