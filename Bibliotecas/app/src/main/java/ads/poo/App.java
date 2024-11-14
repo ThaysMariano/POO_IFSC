@@ -5,21 +5,57 @@ package ads.poo;
 
 import edu.princeton.cs.algs4.Draw;
 
+import java.awt.*;
+import java.awt.event.MouseEvent;
+
 public class App {
+    private Draw draw;
+
+    public App(){
+        this.draw = new Draw();
+        this.draw.setCanvasSize(600, 300);
+        this.draw.setXscale(0, 600);
+        this.draw.setYscale(0, 300);
+    }
+
+
+
+    public void quadrado(){
+
+    }
 
     public static void main(String[] args) {
 
-        Draw draw = new Draw();
+        App app = new App();
 
-        draw.setPenColor(Draw.BOOK_BLUE);
-        draw.text(0.5, 0.5, "Thays");
+        app.quadrado();
 
-        draw.setPenColor(Draw.RED);
-        draw.line(.1, .1, .3, .3);
+//        app.draw.filledCircle(300, 150, 100);
+//
+        Color vermelho = new Color(200, 25, 30);
+        Color verde= new Color(50, 160, 65);
+//
+//        app.draw.setPenColor(vermelho);
+//
+//        app.draw.filledRoundRectangle(100, 134, 91, 54, 98, 230);
+//
+//        Circulo a = new Circulo(100, 90, 43, vermelho);
+//
+//         a.desenhar(app.draw);
+//
+//        Circulo b = new Circulo(150, 130, 43, azul);
+//
+//        b.desenhar(app.draw);
 
-        draw.filledCircle(.7, .7, .2);
+        Quadriculado d = new Quadriculado(350, 100, 40, 4, 3, Draw.BLACK);
 
-       
+        d.desenhar(app.draw);
+
+
+
+
+
+
 
     }
 }
