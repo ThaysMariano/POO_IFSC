@@ -26,34 +26,14 @@ public class Quadriculado {
         this.cor = cor;
     }
 
-    public void desenhar(Draw draw){
-        for (int i=0; i<linhas; i++){
-            draw.line(x, y+(i*ladoQuadrado), x*ladoQuadrado*colunas, y+(i*ladoQuadrado));
+    public void desenharQuadriculado(Draw draw){
+        for (int i = 0; i <= linhas; i++) {
+            draw.line(x, y + (i*ladoQuadrado), x + (colunas * ladoQuadrado), y + (i * ladoQuadrado));
         }
-        for (int i=0; i<colunas; i++){
-            draw.line(x, y+(i*ladoQuadrado), x*ladoQuadrado*linhas, y+(i*ladoQuadrado));
+        for (int j = 0; j <= colunas; j++) {
+            draw.line(x + (j * ladoQuadrado), y, x + (j * ladoQuadrado), y + (linhas * ladoQuadrado));
         }
     }
-
-
-
-
-
-
-
-
-
-    public void definirQuadrados(Draw draw){
-        draw.square(this.x, this.y, this.ladoQuadrado);
-    }
-
-
-
-
-
-
-
-
 
 
 }

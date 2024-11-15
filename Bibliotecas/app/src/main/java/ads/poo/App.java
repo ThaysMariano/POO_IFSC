@@ -13,9 +13,9 @@ public class App {
 
     public App(){
         this.draw = new Draw();
-        this.draw.setCanvasSize(600, 300);
-        this.draw.setXscale(0, 600);
-        this.draw.setYscale(0, 300);
+        this.draw.setCanvasSize(400, 600);
+        this.draw.setXscale(0, 400);
+        this.draw.setYscale(0, 600);
     }
 
 
@@ -47,9 +47,39 @@ public class App {
 //
 //        b.desenhar(app.draw);
 
-        Quadriculado d = new Quadriculado(350, 100, 40, 4, 3, Draw.BLACK);
+//        Quadriculado d = new Quadriculado(200, 100, 40, 4, 3, Draw.BLACK);
+//
+//        d.desenhar(app.draw);
 
-        d.desenhar(app.draw);
+        Quadriculado quadriculado = new Quadriculado(0, 0, 30, 70, 30, Draw.GRAY);
+        Ifsc ifscCirc = new Ifsc(60, 510, 45, vermelho); //corrigir esse raio no construtor
+        Ifsc ifscQuad1 = new Ifsc(180, 510, 0, verde);
+        Ifsc ifscQuad2 = new Ifsc(300, 510, 0, verde);
+        Ifsc ifscQuad3 = new Ifsc(60, 390, 0, verde);
+        Ifsc ifscQuad4 = new Ifsc(180, 390, 0, verde);
+        Ifsc ifscQuad5 = new Ifsc(60, 270, 0, verde);
+        Ifsc ifscQuad6 = new Ifsc(180, 270, 0, verde);
+        Ifsc ifscQuad7 = new Ifsc(300, 270, 0, verde);
+        Ifsc ifscQuad8 = new Ifsc(60, 150, 0, verde);
+        Ifsc ifscQuad9 = new Ifsc(180, 150, 0, verde);
+
+
+        quadriculado.desenharQuadriculado(app.draw);
+
+        ifscCirc.desenharCirculo(app.draw);
+        ifscQuad1.desenharQuadrados(app.draw);
+        ifscQuad2.desenharQuadrados(app.draw);
+        ifscQuad3.desenharQuadrados(app.draw);
+        ifscQuad4.desenharQuadrados(app.draw);
+        ifscQuad5.desenharQuadrados(app.draw);
+        ifscQuad6.desenharQuadrados(app.draw);
+        ifscQuad7.desenharQuadrados(app.draw);
+        ifscQuad8.desenharQuadrados(app.draw);
+        ifscQuad9.desenharQuadrados(app.draw);
+
+
+
+
 
 
 
