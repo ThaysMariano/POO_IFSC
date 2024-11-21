@@ -21,14 +21,14 @@ public class Grade {
         this.x = x;
         this.y = y;
         this.cor = cor;
-        gerarLetrasNumeros(this.x, this.y, this.cor);
     }
 
-    public void gerarLetrasNumeros(double x, double y, Color cor, Draw draw){
+    public void gerarLetrasNumeros( Draw draw){
         //Letras na esquerda
         char letra = 'a';
         for(int i=0; i<=linhas; i++){
-            draw.
+            draw.text((x-10)*i, (y+15)*i, String.valueOf(letra));
+            letra++;
         }
 
 

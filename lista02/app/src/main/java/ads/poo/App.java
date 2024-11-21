@@ -28,6 +28,7 @@ public class App {
         Grade grade = new Grade(300, 120, Color.black);
 
         grade.desenhar(app.draw);
+        grade.gerarLetrasNumeros( app.draw);
 
 
 
@@ -35,7 +36,7 @@ public class App {
 
 
 
-
+s
 
     }
 }
