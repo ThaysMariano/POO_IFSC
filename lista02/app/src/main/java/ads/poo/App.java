@@ -27,7 +27,12 @@ public class App {
 
         Grade grade = new Grade(300, 120, Color.black);
 
+        Navio navio = new Navio(380, 160, false, 4);
+
         grade.desenhar(app.draw, Color.red);
+
+        navio.desenhar(app.draw, Color.BLUE);
+
 
 
 
