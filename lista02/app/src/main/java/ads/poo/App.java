@@ -25,9 +25,9 @@ public class App {
 
         App app = new App();
 
-        Grade grade = new Grade(300, 120, Color.black);
+        Grade grade = new Grade(200, 120, Color.black);
 
-        Navio navio = new Navio(380, 160, false, 4);
+        Navio navio = new Navio(360, 160, false, 4);
 
         grade.desenhar(app.draw, Color.red);
 
