@@ -23,24 +23,34 @@ public class Grade {
         this.cor = cor;
     }
 
-    public void gerarLetrasNumeros( Draw draw){
+    public void gerarLetrasNumeros( Draw draw, Color cor){
         //Letras na esquerda
-        char letra = 'a';
-        for(int i=0; i<=linhas; i++){
-            draw.text((x-10)*i, (y+15)*i, String.valueOf(letra));
+        draw.setPenColor(cor);
+        char letra = 'A';
+        for(int i=0; i<linhas; i++){
+            draw.text((this.x-10), (y*i-celula*i*2)+y+15, String.valueOf(letra));
             letra++;
+        }
+
+        int num = 0;
+        //Numeros embaixo
+        for(int i=0; i<colunas; i++){
+            draw.text(x+(i*celula+20), y-15, String.valueOf(num));
+            num++;
         }
 
 
     }
 
-    public void desenhar(Draw draw){
+    public void desenhar(Draw draw, Color cor){
         for( int i =0; i<=linhas; i++){
             draw.line(x, y+(i*celula), x+(colunas*celula), y+(i*celula) );
         }
         for (int j=0; j<=colunas; j++){
             draw.line(x+(j*celula), y, x+(j*celula), y+(linhas*celula)  );
         }
+
+        gerarLetrasNumeros(draw, cor);
 
     }
 }
