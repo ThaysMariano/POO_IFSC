@@ -1,6 +1,7 @@
 package ads.poo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class Aluno {
@@ -11,7 +12,7 @@ public class Aluno {
     private int matricula;
     private ArrayList<String> telefone;
     private String[] filiacao;
-    private HashSet<String> disciplinas;
+    private HashSet<String> disciplinas;         //conjunto que não permite duplicados
 
 
 //-------------------------------------
@@ -29,18 +30,35 @@ public class Aluno {
         this.telefone.add(tel);
     }
 
-    public void setFiliacao(String[] filiacao) {
-        this.filiacao = filiacao;
+    public boolean adicionarDisciplinas(String dcp) {
+        return this.disciplinas.add(dcp);
     }
 
-    public boolean adicionarDisciplinas(String dsp) {
-        return this.disciplinas.add(dsp);
+    public boolean removerDisciplinas(String dcp){
+        return this.disciplinas.removeIf(e->e.equals(dcp));
     }
 
 
+    @Override
+    public String toString() {
+        StringBuilder telefones = new StringBuilder();
+        StringBuilder disciplina = new StringBuilder();
 
 
+        for (String tel : telefone){
+            telefones.append("\n").append("    -").append(tel);
+        }
+        for (String dcp : disciplinas){
+            disciplina.append("\n").append("    -").append(dcp);
+        }
 
-
-
+        return "\n Matrícula: " + matricula +
+                "\n Nome: " + nome +
+                "\n Filiação: " +
+                "\n    Pai: " + filiacao[0] +
+                "\n    Mãe: " + filiacao[1]+
+                "\n Telefones: " + telefones+
+                "\n Disciplinas: " + disciplina
+                ;
+    }
 }

@@ -107,7 +107,19 @@ public class App {
 
 //----------------------------- Aluno
 
-        Aluno aluno = new Aluno("a", 3284, new String[]{"ana", "juca"});
+        Aluno ana = new Aluno("Ana", 3284, new String[]{"juca", "julia"});
+
+        ana.adicionarDisciplinas("POO");
+        ana.adicionarDisciplinas("RCO");
+        ana.setTelefone("048 28371946");
+        ana.setTelefone("038 37428974");
+
+        System.out.println(ana.toString());
+
+
+
+
+
 
 
 
