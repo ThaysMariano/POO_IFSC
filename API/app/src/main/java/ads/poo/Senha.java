@@ -26,6 +26,11 @@ public class Senha {
 
     @Override
     public String toString() {
-        return "Senha: "+ numero;
+        return "Senha{" +
+                "numero=" + numero +
+                ", preferencial=" + preferencial +
+                ", assunto='" + assunto + '\'' +
+                ", horario=" + horario +
+                '}';
     }
 }
