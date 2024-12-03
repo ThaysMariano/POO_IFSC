@@ -4,21 +4,20 @@
 
 classDiagram
 
-    direction LR
+    direction BT
     
     class Aluno{
         - nome: String
         - matricula: String
-        + Aluno(String n, String m)
+        - cpf: CPF
+        + Aluno(n: String, m: String)
     }
-    
-    Aluno -- Curso
 
-    Aluno -- Turma
+    Aluno "1" *-->"1" CPF
+    Curso "1"--> "*" Aluno
+    Curso "1" *--> "1..*" Turma
     
-    Aluno -- SIGAA
-    
-    SIGAA -- Curso
+  
     
     
     class Curso{
@@ -44,10 +43,7 @@ classDiagram
         
         
     }
-    
-    class SIGAA{
-        
-    }
+
 
 
 
