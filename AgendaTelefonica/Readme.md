@@ -16,17 +16,21 @@ classDiagram
     class App{
         -ListaDeContatos
         + main()$
+        + menu()
     }
     
     class ListaDeContatos{
-        - contato : Contato
+        - contato : Array~Contato~
         
-        
-        + adicionarContato(nome : String) :
-        + removerContato(nome : String) -- ou indice:
-        + atualizarContato(nome: String) :
-        + listarDadosContato(nome: String) :
-        + listarContatos(nome: String) :
+        + ListaDeContatos()
+        + adicionarContato(c: Contato)  boolean
+        + removerContato(n: String, s: String)  boolean
+        + adicionarTelefone(r: String, n: String, s: String) boolean
+        + adicionarEmail(r: String, e: String, c: Contato) boolean
+        + atualizarTelefone(r: String, n: String, c: Contato) boolean
+        + 
+        + listarDadosContato(nome: String)  boolean
+        + listarContatos(nome: String)  boolean
     }
     
     class Contato{
@@ -36,7 +40,7 @@ classDiagram
         - telefones : ArrayList~Telefone~
         - emails : ArrayList~Email~
         
-        + contato(String n, String s, String data, String tel, String e)
+        + Contato(String n, String s, String data, String tel, String e)
         + verificarRotulos()
         + add, rm, update
     }
@@ -45,20 +49,17 @@ classDiagram
         -rotulo : String
         -valor : String
         
+        +Telefone(r: String, v: String)
+        
     }
     
     class Email{
         -rotulo : String
         -valor : String
         
-        
+        +Email(r: String, v: String)
         +verificarValidadeEmail()
     }
-
-
-
-
-
 
 
 
