@@ -7,10 +7,10 @@ classDiagram
 
     direction TB
  
-    ListaDeContatos "1" *--> "*" Contato
-    Contato "1" *--> "1..*" Telefone
-    Contato "1" *--> "1..*" Email
-    App --> ListaDeContatos
+    ListaDeContatos "1" *--> "0..*" Contato
+    Contato "1" *--> "0..*" Telefone
+    Contato "1" *--> "0..*" Email
+    App *-- ListaDeContatos
     
     
     class App{
