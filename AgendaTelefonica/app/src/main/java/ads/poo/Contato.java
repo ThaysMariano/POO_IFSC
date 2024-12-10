@@ -68,10 +68,11 @@ public class Contato {
         return false;
     }
 
+    public String getNome() {
+        return nome;
+    }
 
-
-
-
-
-
+    public String getSobrenome() {
+        return sobrenome;
+    }
 }

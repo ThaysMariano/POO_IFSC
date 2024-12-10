@@ -8,13 +8,49 @@ import org.checkerframework.checker.units.qual.C;
 import javax.swing.text.MaskFormatter;
 import java.text.ParseException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 
 public class App {
 
     private ListaDeContatos ListadeCOntatos;
 
+    public void menu(){
+        // ...:Agenda:..
+        // 1 cadastrar
+        // 2 atualizar
+        // 3 excluir
+        // 4 detalhes de um contato
+        // 5 listar todos os contatos
+        // 6 sair
+        // qual opcao?
+
+        //..: Contatos:..
+        // 1 Juca silva
+        // 2 Ana Maria
+        // 3 Maria Andrade
+        // qual contato?
+    }
+
+    //imprimir menu, ler dados e chamar metodos
+
+
     public static void main(String[] args) {
+
+        //formataçao da data
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Entre com a data de nascimento (dd/MM/AAAA): ");
+        String dataStr = teclado.nextLine();
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate dataNasc = LocalDate.parse(dataStr, dtf); //guarda no formato LocalData p poder digitar normalmente
+
+        System.out.println("Data lida: "+ dataNasc);
+        System.out.println("Data formatada: "+ dataNasc.format(dtf));
+
+
+
 
         App app = new App();
 
