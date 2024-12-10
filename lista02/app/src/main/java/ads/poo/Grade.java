@@ -42,7 +42,8 @@ public class Grade {
 
     }
 
-    public void desenhar(Draw draw, Color cor){
+    public void desenhar(Draw draw){
+        draw.getPenColor(Color.black);
         for( int i =0; i<=linhas; i++){
             draw.line(x, y+(i*celula), x+(colunas*celula), y+(i*celula) );
         }
