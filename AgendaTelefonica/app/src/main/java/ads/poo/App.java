@@ -10,23 +10,27 @@ import java.text.ParseException;
 import java.time.LocalDate;
 
 
-
 public class App {
-
-
-
 
     private ListaDeContatos ListadeCOntatos;
 
     public static void main(String[] args) {
+
+        App app = new App();
+
         Contato c = new Contato("Thays", "Mariano", LocalDate.of(2005, 11, 18));
+ //       Contato a = new Contato("Ana", "Silva", LocalDate.of(2001, 8, 30));
 
          Telefone tel = new Telefone("Casa", "48988339737");
 
          Email email = new Email("Pessoal", "thays.sm@aluno.ifsc.edu.br");
 
+ //        c.addTelefone("trabalho", "3498348729");
+
         System.out.println(tel);
         System.out.println(email);
+
+
 
 
 

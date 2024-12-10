@@ -14,7 +14,7 @@ classDiagram
     
     
     class App{
-        -ListaDeContatos
+        - listaContatos : ListaDeContatos
         + main()$
         + menu()
     }
@@ -22,15 +22,14 @@ classDiagram
     class ListaDeContatos{
         - contato : Array~Contato~
         
-        + ListaDeContatos()
-        + adicionarContato(c: Contato)  boolean
-        + removerContato(n: String, s: String)  boolean
-        + adicionarTelefone(r: String, n: String, s: String) boolean
-        + adicionarEmail(r: String, e: String, c: Contato) boolean
-        + atualizarTelefone(r: String, n: String, c: Contato) boolean
-        + 
-        + listarDadosContato(nome: String)  boolean
-        + listarContatos(nome: String)  boolean
+        +Contato(n: String, s: String, dataN: LocalDate)
+        + delContato(n: String, s: String)  boolean
+        + addTelefone(r: String, n: String, s: String) boolean
+        + delTelefone(r: String) boolean
+        + updateTelefone(r: String, n: String) boolean
+        + addEmail(r: String, e: String, c: Contato) boolean
+        + delEmail(r: String) boolean
+        + updateEmail(r: String, v: String) boolean
     }
     
     class Contato{
@@ -40,9 +39,14 @@ classDiagram
         - telefones : ArrayList~Telefone~
         - emails : ArrayList~Email~
         
-        + Contato(String n, String s, String data, String tel, String e)
-        + verificarRotulos()
-        + add, rm, update
+        + Contato(n: String s: String, dataN: String)
+        + addTelefone(r: String, v: String) boolean
+        + delTelefone(r: String) boolean
+        + updateTelefone(r: String, v: String) boolean
+        + addEmail(r: String, v: String) boolean
+        + delEmail(r: String) boolean
+        + updateEmail(r: String, v: String) boolean
+        
     }
     
     class Telefone{
@@ -58,7 +62,7 @@ classDiagram
         -valor : String
         
         +Email(r: String, v: String)
-        +verificarValidadeEmail()
+        +verificarValidadeEmail(v: String) boolean
     }
 
 

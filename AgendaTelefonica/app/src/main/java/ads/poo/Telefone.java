@@ -18,7 +18,7 @@ public class Telefone {
 
     @Override
     public String toString() {
-        return "Telefone   " +
+        return "Telefone:   " +
                 "\n " + rotulo + ": " + valor;
 
     }
@@ -40,15 +40,11 @@ public class Telefone {
     }
 
 
+    public String getRotulo() {
+        return rotulo;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
 }
