@@ -44,27 +44,36 @@ classDiagram
 ```mermaid
 classDiagram
 
-    Literatura <|-- Livro
-    Literatura <|-- Revista
-    Literatura <|-- Jornal
-    Literatura <|-- Gibi
+    Texto <|-- Livro
+    Texto <|-- Revista
+    Texto <|-- Jornal
+    Texto <|-- Gibi
     
-    class Literatura{
-        
+    class Texto{
+        #genero : String
+        #tamanhoPaginas : int
+        #titulo : String
+        #editora : String
+
     }
     
     class Livro{
-        
+        -tipoCapa : String
+        -autores : ArrayList~String~
+ 
     }
     
     class Revista{
-        
+        - Imagens ArrayList~Imagens~
+        - editor : String
     }
     class Jornal{
-        
+        - Manchete : ArrayList~String~
     }
     class Gibi{
-        
+        - quadirnhos : ArrayList~Quadrinhos~
+        -autores : ArrayList~String~
+
     }
     
     
