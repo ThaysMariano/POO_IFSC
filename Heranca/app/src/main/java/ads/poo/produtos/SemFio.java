@@ -22,6 +22,10 @@ public class SemFio extends Telefone{
 
     }
 
+    public String trocarCanal(){
+        return "trocando de canal";
+    }
+
 
     @Override
     public String imprimirDados() {
@@ -31,6 +35,6 @@ public class SemFio extends Telefone{
         sb.append(", distancia=").append(distancia);
         sb.append('}');
         sb.append(super.imprimirDados());
-        return super.imprimirDados();
+        return sb.toString();
     }
 }

@@ -7,19 +7,54 @@ import ads.poo.produtos.Dimensao;
 import ads.poo.produtos.SemFio;
 import ads.poo.produtos.Telefone;
 
+import java.util.ArrayList;
+
 public class App {
 
 
     public static void main(String[] args) {
 
+
         Telefone tel = new Telefone(12, "aa", "b", 5, new Dimensao(12, 334, 56));
         SemFio sf = new SemFio( 12, "grbts", "fsers", 5, new Dimensao(12, 334, 56), 12, 34, 54);
 
-        System.out.println(tel.imprimirDados());
+        ArrayList<Telefone> objetos = new ArrayList<>();
+        objetos.add(tel); //objetos.add(new Telefone(..)); cria o telefone aqui dentro
+        objetos.add(sf);
 
-        System.out.println(sf.imprimirDados());
+        for(Telefone telef : objetos){
+            System.out.println(telef.imprimirDados());
+        }
 
 
+
+//
+//        System.out.println(tel.imprimirDados());
+//
+//        System.out.println(sf.imprimirDados());
+
+//        sf.discar();
+//        sf.trocarCanal();
+//
+//        tel.discar();
+//
+//        Telefone b;
+//
+
+//      funciona
+//        b=sf;
+//        b.trocarCanal();
+//        ((SemFio)b).trocarCanal();
+//
+//       nao funciona -- entra no else
+//       b = tel;
+//        ((SemFio)b).trocarCanal();
+//
+//        if ( b instanceof SemFio){
+//            ((SemFio)b).trocarCanal();
+//        }else{
+//            System.out.println("nao e sem fio");
+//        }
 
 
 

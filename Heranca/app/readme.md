@@ -50,7 +50,7 @@ classDiagram
     Texto <|-- Gibi
     
     class Texto{
-        #genero : String
+        #genero : String --
         #tamanhoPaginas : int
         #titulo : String
         #editora : String
@@ -59,7 +59,7 @@ classDiagram
     
     class Livro{
         -tipoCapa : String
-        -autores : ArrayList~String~
+        -autores : ArrayList~String~ --
  
     }
     
@@ -72,7 +72,7 @@ classDiagram
     }
     class Gibi{
         - quadirnhos : ArrayList~Quadrinhos~
-        -autores : ArrayList~String~
+        -autores : ArrayList~String~ --
 
     }
     

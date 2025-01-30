@@ -11,13 +11,16 @@ public class Telefone {
 //-----------------------------------------
 
 
-
     public Telefone(int codigo, String numSerie, String modelo, double peso, Dimensao dimensao) {
         this.codigo = codigo;
         this.numSerie = numSerie;
         this.modelo = modelo;
         this.peso = peso;
         this.dimensao = dimensao;
+    }
+
+    public String discar(){
+        return "discando";
     }
 
 
@@ -30,8 +33,6 @@ public class Telefone {
                 ", dimensao=" + dimensao +
                 '}';
     }
-
-
 
 
 }
