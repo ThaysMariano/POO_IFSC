@@ -31,16 +31,16 @@ public class App {
         bonecos.add(arq);
 
 
-
-        for (Personagem pers : bonecos) {
-            System.out.println(pers.andar());
-            System.out.println(pers.atacar());
-        }
+//
+//        for (Personagem pers : bonecos) {
+//            System.out.println(pers.andar());
+//            System.out.println(pers.atacar());
+//        }
 
 
 //----------------------------------------------------------------
 
-//      Pessoa p = new Pessoa("aaa", nul);
+//      Pessoa p = new Pessoa("aaa", null);
         Pessoa e = new Estudante("aa", null);
         Pessoa p = new Professor("Ana", null);
 

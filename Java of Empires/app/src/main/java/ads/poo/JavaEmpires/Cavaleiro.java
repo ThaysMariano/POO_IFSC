@@ -1,6 +1,6 @@
 package ads.poo.JavaEmpires;
 
-public class Cavaleiro extends Personagem{
+public class Cavaleiro extends Personagem implements  Guerreiro{
 
 
     public Cavaleiro(double vida, int ataque, double velocidade) {

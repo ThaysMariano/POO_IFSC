@@ -1,6 +1,6 @@
 package ads.poo.JavaEmpires;
 
-public class Arqueiro extends Personagem{
+public class Arqueiro extends Personagem implements  Guerreiro{
 
     public Arqueiro(double vida, int ataque, double velocidade) {
         super(vida, ataque, velocidade);

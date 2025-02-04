@@ -11,8 +11,6 @@ public abstract class Personagem {
         this.velocidade = velocidade;
     }
 
-    public abstract String atacar();
-
     public abstract String andar();
 
 }

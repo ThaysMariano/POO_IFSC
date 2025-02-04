@@ -1,7 +1,7 @@
 package ads.poo.JavaEmpires;
 
 
-public class Aldeao extends Personagem {
+public class Aldeao extends Personagem implements Coletador, Guerreiro {
 
     public Aldeao(double vida, int ataque, double velocidade) {
         super(vida, ataque, velocidade);
@@ -16,4 +16,13 @@ public class Aldeao extends Personagem {
 
     }
 
+    @Override
+    public String coletarMadeira() {
+        return "Coletando madeira";
+    }
+
+    @Override
+    public String coletarOuro() {
+        return "Coletando Ouro";
+    }
 }
