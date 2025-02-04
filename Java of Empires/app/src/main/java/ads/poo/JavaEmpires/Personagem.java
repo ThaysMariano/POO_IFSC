@@ -1,6 +1,6 @@
 package ads.poo.JavaEmpires;
 
-public class Personagem {
+public abstract class Personagem {
     protected double vida;
     protected int ataque;
     protected double velocidade;
@@ -11,12 +11,8 @@ public class Personagem {
         this.velocidade = velocidade;
     }
 
-    public String atacar(){
-        return "atacando";
-    }
+    public abstract String atacar();
 
-    public String andar(){
-        return "andando";
-    }
+    public abstract String andar();
 
 }

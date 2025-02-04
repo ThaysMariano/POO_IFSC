@@ -7,6 +7,9 @@ import ads.poo.JavaEmpires.Aldeao;
 import ads.poo.JavaEmpires.Arqueiro;
 import ads.poo.JavaEmpires.Cavaleiro;
 import ads.poo.JavaEmpires.Personagem;
+import ads.poo.abstratos.Estudante;
+import ads.poo.abstratos.Pessoa;
+import ads.poo.abstratos.Professor;
 import jdk.jfr.Percentage;
 import org.checkerframework.checker.units.qual.C;
 
@@ -15,10 +18,12 @@ import java.util.ArrayList;
 public class App {
 
 
-    public static void main(String[] args){
+    private static Pessoa e;
+
+    public static void main(String[] args) {
 
         Cavaleiro c = new Cavaleiro(50, 3, 2);
-        Arqueiro arq = new Arqueiro(35, 2,1);
+        Arqueiro arq = new Arqueiro(35, 2, 1);
 
         ArrayList<Personagem> bonecos = new ArrayList<>();
         bonecos.add(new Aldeao(25, 1, 0.8));
@@ -26,15 +31,21 @@ public class App {
         bonecos.add(arq);
 
 
-        //fazer
-        for (Personagem pers : bonecos){
 
+        for (Personagem pers : bonecos) {
             System.out.println(pers.andar());
             System.out.println(pers.atacar());
-
-
-
         }
+
+
+//----------------------------------------------------------------
+
+//      Pessoa p = new Pessoa("aaa", nul);
+        Pessoa e = new Estudante("aa", null);
+        Pessoa p = new Professor("Ana", null);
+
+        System.out.println(e.mover());
+        System.out.println(p.mover());
 
 
     }

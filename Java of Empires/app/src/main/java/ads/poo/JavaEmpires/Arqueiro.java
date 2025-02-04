@@ -7,11 +7,11 @@ public class Arqueiro extends Personagem{
     }
 
     public String atacar(){
-        return "atacando com flechas";
+        return "Atacando com flechas";
     }
 
     public String andar(){
-        return "andando com velocidade = "+ velocidade;
+        return "Andando com velocidade = "+ velocidade;
     }
 
 

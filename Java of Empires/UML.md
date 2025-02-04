@@ -16,7 +16,6 @@ classDiagram
         
         -atacar() String
         -andar() String
-        -tomarDano() String
         
     }
         
