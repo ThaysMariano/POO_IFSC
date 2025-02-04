@@ -7,11 +7,11 @@ public class Aldeao extends Personagem {
         super(vida, ataque, velocidade);
     }
 
-    private String atacar(){
+    public String atacar(){
         return "Atacando com a picareta";
     }
 
-    private String andar(){
+    public String andar(){
         return "Andando com velocidade = " + velocidade;
 
     }

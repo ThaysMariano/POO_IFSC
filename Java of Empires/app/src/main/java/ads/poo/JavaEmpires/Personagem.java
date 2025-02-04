@@ -11,11 +11,11 @@ public class Personagem {
         this.velocidade = velocidade;
     }
 
-    private String atacar(){
+    public String atacar(){
         return "atacando";
     }
 
-    private String andar(){
+    public String andar(){
         return "andando";
     }
 

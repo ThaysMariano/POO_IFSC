@@ -17,19 +17,22 @@ public class App {
 
     public static void main(String[] args){
 
-        Aldeao a = new Aldeao(25, 1, 0.8);
         Cavaleiro c = new Cavaleiro(50, 3, 2);
         Arqueiro arq = new Arqueiro(35, 2,1);
 
         ArrayList<Personagem> bonecos = new ArrayList<>();
-        bonecos.add(a);
+        bonecos.add(new Aldeao(25, 1, 0.8));
         bonecos.add(c);
         bonecos.add(arq);
 
 
         //fazer
-        for(Personagem pers : bonecos){
-            System.out.println();
+        for (Personagem pers : bonecos){
+
+            System.out.println(pers.andar());
+            System.out.println(pers.atacar());
+
+
 
         }
 

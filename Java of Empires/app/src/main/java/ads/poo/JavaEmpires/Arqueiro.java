@@ -11,7 +11,7 @@ public class Arqueiro extends Personagem{
     }
 
     public String andar(){
-        return "andando com velocidaed = "+ velocidade;
+        return "andando com velocidade = "+ velocidade;
     }
 
 
